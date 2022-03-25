@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- 說明本 HTML 文件採用 HTML5 編寫 -->
+<html lang="zh-TW">
+<!-- HTML 標籤範圍，其中 lang 是這個元素的屬性宣告，也就是說明這個標籤內容都是台灣中文 -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>實用工具與功能</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <a href="https://www.w3school.com.cn/charsets/ref_html_8859.asp">完整特殊符號表</a>
+        </div>
+        <div style="width: 100%;">
+            基本上&lt;html&gt;+&lt;head&gt;+&lt;body&gt;都不可缺少
+            ，但現在瀏覽器十分聰明會自己判斷標籤語法試著修正並預覽，不要認為某些精簡寫法是對的，還是需要有良好的 HTML
+            結構觀念，HTML 的結構越完整無瑕能幫助 SEO 評級更高（完善 meta 也是幫助 SEO 的主要項目）。
+        </div>
+        <hr>
+        <div>
+            <div>假文生產器(英文) Lorem數字 or lorem*3(行數) ctlorem</div>
+            <div>Lorem, ipsum Lorem ipsum dolor sit amet. </div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit est inventore voluptates incidunt hic
+                dolorem voluptas nemo sed blanditiis soluta rem nam mollitia iusto quidem perspiciatis fugit, eum id
+                nulla.</div>
+            <p></p>
+            <div>假文生產器(中文) ctlorem指定字數</div> <!-- vscode套件 chinese lorem -->
+            <div>財務身</div>
+        </div>
+
+
+        <div>
+            <p>假圖生產器</p> <br>
+            <!--  假圖生產器 -->
+            <!-- 產生寬高都是100px的圖片 -->
+            <img src="https://picsum.photos/100">
+            <!-- 產生寬：500px 高：100px的圖片 -->
+            <img src="https://picsum.photos/500/100">
+            <br />
+            在url代入不同random參數，產生不同圖片 <br>
+            <img src="https://picsum.photos/80?random=1">
+            <img src="https://picsum.photos/80?random=2">
+            <img src="https://picsum.photos/80?random=3">
+            <br>
+            <p>在url代入不同參數，也可以使用v-for迴圈產出</p> <!-- vue.js套件-->
+            <div class="avatar" v-for="item in [1,2,3,4,5,6,7,8]">
+                <el-avatar :size="60" :src="'https://picsum.photos/60?random'+item"></el-avatar>
+            </div>
+            <a href="https://picsum.photos/">假圖生產網址</a>
+        </div>
+    </div>
+</body>
+
+</html>

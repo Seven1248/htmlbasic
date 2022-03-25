@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基礎語法</title>
+</head>
+
+<body>
+
+
+    <h2 id="標籤規則與特性"><a href="#標籤規則與特性" class="headerlink" title="標籤規則與特性"></a>標籤規則與特性</h2>
+    <p>標籤本身有語意上的重要性，間接影響到結構及搜尋引擎優化（SEO）。這裡初步了解標籤怎麼去標記內容（文字、圖片、影片），以及如何組成網頁結構上一部分。</p>
+    <ul>
+        <li>標籤不分大小寫，請用小寫。</li>
+        <li><code>&lt;&gt;</code>開始，<code>&lt;/ &gt;</code>結束。</li>
+        <li>標籤具有屬性與值的特性。</li>
+        <li>少數獨立標籤指沒有結尾標籤（空標籤），像是<code>&lt;meta&gt;</code>、<code>&lt;link&gt;</code>、<code>&lt;br&gt;</code>、<code>&lt;hr&gt;</code>、<code>&lt;img&gt;</code>
+        </li>
+    </ul>
+    <figure class="highlight html">
+        <figcaption><span>index.html</span></figcaption>
+        <table>
+            <tr>
+                <!-- <td class="code">
+                    <pre><span class="line"><span class="comment">
+                        &lt;!-- </span></span><br><span class="line"><span class="comment"> 
+                             有個 a 標籤，它標記了 Google 這文字，</span>
+                            </span><br><span class="line"><span class="comment">  
+                                它的屬性 href(Hypertext Reference) 告訴我們要前往的位置，
+                            </span></span><br><span class="line">
+                            <span class="comment">  它的值是 &quot;http://www.google.com&quot;。
+                            </span></span><br><span class="line"><span class="comment">
+                            --&gt;</span></span><br><span class="line"><span class="tag">
+                            &lt;<span class="name">a</span> <span class="attr">
+                            href
+                            </span>=<span class="string">&quot;http://www.google.com&quot;
+
+                            </span>&gt;</span>Google<span class="tag">&lt;/<span class="name">a
+
+                            </span>&gt;</span></span><br><span class="line">
+
+                            </span><br><span class="line"><span class="comment">
+                                &lt;!-- 空標籤 --&gt;
+                            </span></span><br><span class="line"><span class="comment">&lt;!-- input:&#x27;fakeimg&#x27; --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://fakeimg.pl/500x300&quot;</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!-- input:&#x27;picsum&#x27; --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">&quot;https://picsum.photos/500/300/?random=2&quot;</span>&gt;</span></span><br></pre>
+                </td> -->
+            </tr>
+        </table>
+    </figure>
+
+
+    <h2 id="絕對與相對路徑"></a>絕對與相對路徑</h2>
+    <p>既然談到圖片跟超連結那就需要知道路徑。當你的資源來源是外部位置時，很簡單給他一個 http 位置的絕對路徑。但如果是內部路徑，我們就需要知道相對的路徑在哪裡。</p>
+    <p><strong>絕對路徑</strong><br>一般在連結外部連結、網路上的資源時使用，當然你也可以當內部連結使用，但效能就是差且不可變動性。</p>
+    <ul>
+        <li><code>http://網域名稱/資料夾名稱/資料夾名稱/檔案名稱</code></li>
+    </ul>
+    <p><strong>相對路徑</strong><br>從目前使用的檔案位置為判斷處來找到目標檔案的位置，通常製作網站取得內部檔案或多媒體時使用。</p>
+    <ul>
+        <li><code>images/01.jpg</code> 目前檔案位置為起點，往下探尋</li>
+        <li><code>./images/01.jpg</code> index 位置為起點，往下探尋</li>
+        <li><code>../</code> 回上一層</li>
+        <li><code>/</code> 從設定的根目錄開始找</li>
+    </ul>
+    <!-- 無序號的清單 Unordered List -->
+    <ul>
+        <li>無序號的清單 &lt;ul&gt; &lt;/ul&gt; &lt; li &gt; &lt; /li &gt; </li>
+        <li>測試</li>
+        <li>測試</li>
+    </ul>
+    <!-- 有序號的清單 Ordered List -->
+    <ol>
+        <li>有序號的清單 &lt;ol&gt; &lt;/ol&gt; &lt; li &gt; &lt; /li &gt; </li>
+        <li>測試</li>
+        <li>測試</li>
+    </ol>
+    <hr>
+
+    <!-- bold -->
+    <h5>文字效果</h5>
+    <table border="1" style="text-align:center">
+        <tr>
+            <th> bold </th>
+            <th> italic </th>
+            <th> strike </th>
+            <th> underline </th>
+            <th> style </th>
+        </tr>
+        <tr>
+            <td><b>Bold</b></td>
+            <td><i>我是斜體</i></td>
+            <td><s>我也是刪除線</s></td>
+            <td><u>我是底線</u></td>
+            <td><small>小字</small></td>
+        </tr>
+        <tr>
+            <td> <strong>強調內容</strong></td>
+            <td><em>我也是斜體</em></td>
+            <td> <del>我是刪除線</del></td>
+            <td><ins>我也是底線</ins></td>
+            <td><big>大字</big></td>
+        </tr>
+        <tr>
+            <td> <mark>黃色標記</mark></td>
+            <td rowspan="2" colspan="3"></td>
+
+            <td><sup>上標</sup></td>
+        </tr>
+        <tr>
+            <td> </td>
+
+            <td><sub>下標</sub></td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <pre><code>程式碼</code></pre>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5"><q>我是引言，短句用我</q></td>
+        </tr>
+        <tr>
+            <td colspan="5">
+                <blockquote>我也是引言，長篇文章用我</blockquote>
+            </td>
+        </tr>
+    </table>
+
+    <hr>
+    <h2 align="center">表格練習</h2>
+    <table border="1" style="text-align:center" align="center">
+        <tr>
+            <td>節數</td>
+            <td>一</td>
+            <td>二</td>
+            <td>三</td>
+            <td>四</td>
+            <td>五</td>
+        </tr>
+        <tr>
+            <td>早自習<br />0750~0830</td>
+            <td colspan="5"></td>
+        </tr>
+        <tr>
+            <td>第一節<br />0840~0920</td>
+            <td rowspan="2">國語<br />劉展華</td>
+            <td colspan="3">數學<br />劉展華</td>
+            <td>國語<br />劉展華</td>
+        </tr>
+        <tr>
+            <td>第二節<br />0930~1010</td>
+            <td>自然<br />黃新民</td>
+            <td>音樂<br />萬巧如</td>
+            <td>國語<br />劉展華</td>
+            <td>彈性<br />劉展華</td>
+        </tr>
+        <tr>
+            <td>第三節<br />1030~1110</td>
+            <td>數學<br />劉展華</td>
+            <td>健康<br />潘文欽</td>
+            <td>國語<br />劉展華</td>
+            <td>鄉土<br />魏士欽</td>
+            <td rowspan="2">自然<br />黃新民</td>
+        </tr>
+        <tr>
+            <td>第四節<br />1120~1200</td>
+            <td>英語<br />黃定宜</td>
+            <td>彈性<br />劉展華</td>
+            <td>社會<br />劉展華</td>
+            <td>英語<br />黃定宜</td>
+        </tr>
+        <tr>
+            <td>午休時間<br />1200~1320</td>
+            <td colspan="5"></td>
+        </tr>
+        <tr>
+            <td>第五節<br />1330~1410</td>
+            <td>社會<br />劉展華</td>
+            <td rowspan="2">美勞<br />許文杰</td>
+            <td rowspan="3"></td>
+            <td rowspan="3">綜合<br />劉展華</td>
+            <td>體育<br />潘文欽</td>
+        </tr>
+        <tr>
+            <td>第六節<br />1420~1500</td>
+            <td>體育<br />潘文欽</td>
+            <td>國語<br />劉展華</td>
+        </tr>
+        <tr>
+            <td>第七節<br />1520~1600</td>
+            <td colspan="2">彈性<br />劉展華</td>
+            <td>社會<br />劉展華</td>
+        </tr>
+    </table>
+    <hr>
+
+    <h2 id="表單"><a href="#表單" class="headerlink" title="表單"></a>表單</h2>
+    <p>每個輸入欄位會有自己的名稱 name，輸入完表單資料後會產生屬於它的值，form 標籤有 POST 或 GET 的方法去傳遞欄位的值，將值傳送到伺服器（依賴另種伺服器程式做承接處理，像是 PHP
+        當作橋樑與資料庫溝通，去做新增、修改、刪除資料）。</p>
+    <ul>
+        <li>PHP 接收資料的方式有分<code>$_POST[&#39;id&#39;]</code>跟<code>$_GET[&#39;id&#39;]</code></li>
+    </ul>
+    <hr>
+    <h2 align="center">表單練習</h2>
+    <fieldset>
+        <!-- fieldset 是一種可組合表單的元素，進行區塊打包並框線化 -->
+        <legend>表單介紹</legend>
+        <form method="post" enctype="multipart/form-data">
+            <table width="100%">
+                <tr>
+                    <td width="100">帳號：</td>
+                    <td><input type="text" name="id" placeholder="請輸入帳號" /></td>
+                </tr>
+                <tr>
+                    <td>密碼：</td>
+                    <td><input type="password" name="pw" placeholder="請輸入密碼" /></td>
+                </tr>
+                <tr>
+                    <td>性別：</td>
+                    <td>
+                        <!-- name 需相同，表示同一組單選，checked 為預設勾選選項 -->
+                        <input type="radio" name="gender" value="男" />男
+                        <input type="radio" name="gender" value="女" checked />女
+                    </td>
+                </tr>
+                <tr>
+                    <td>興趣：</td>
+                    <td>
+                        <!-- name 需相同，表示同一組複選，checked 為預設勾選選項 -->
+                        <input type="checkbox" name="like" value="拍照" />拍照
+                        <input type="checkbox" name="like" value="看書" />看書
+                        <input type="checkbox" name="like" value="唱歌" />唱歌
+                        <input type="checkbox" name="like" value="寫網頁" checked />寫網頁
+                        <input type="checkbox" name="like" value="逛街" checked />逛街
+                    </td>
+                </tr>
+                <tr>
+                    <td>出生年份：</td>
+                    <td>
+                        <select name="select">
+                            <option value="1980">1980</option>
+                            <option value="1990">1990</option>
+                            <option value="2000" selected>2000</option>
+                            <option value="2010">2010</option>
+                        </select>
+                        年
+                    </td>
+                </tr>
+                <tr>
+                    <td width="100">上傳檔案：</td>
+                    <td><input type="file" name="upload" /></td>
+                </tr>
+                <tr>
+                    <td>留言訊息：</td>
+                    <td><textarea name="msg" cols="50" rows="5"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="送出" />
+                        <input type="reset" value="重置" />
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </fieldset>
+
+    <hr>
+
+
+</body>
+
+</html>
